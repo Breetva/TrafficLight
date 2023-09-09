@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet var lights: [UIView]!
     @IBOutlet var button: UIButton!
     
-    var counter = 0
+    private var numberOfLight = 0
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.25
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +29,22 @@ class ViewController: UIViewController {
     @IBAction func buttonDidTapped() {
         button.setTitle("NEXT", for: .normal)
         
-        switch counter {
+        switch numberOfLight {
         case 0:
-            lights[0].alpha = 1
-            lights[1].alpha = 0.25
-            lights[2].alpha = 0.25
-            counter += 1
+            lights[0].alpha = lightIsOn
+            lights[1].alpha = lightIsOff
+            lights[2].alpha = lightIsOff
+            numberOfLight += 1
         case 1:
-            lights[0].alpha = 0.25
-            lights[1].alpha = 1
-            lights[2].alpha = 0.25
-            counter += 1
+            lights[0].alpha = lightIsOff
+            lights[1].alpha = lightIsOn
+            lights[2].alpha = lightIsOff
+            numberOfLight += 1
         default:
-            lights[0].alpha = 0.25
-            lights[1].alpha = 0.25
-            lights[2].alpha = 1
-            counter = 0
+            lights[0].alpha = lightIsOff
+            lights[1].alpha = lightIsOff
+            lights[2].alpha = lightIsOn
+            numberOfLight = 0
         }
     }
     
