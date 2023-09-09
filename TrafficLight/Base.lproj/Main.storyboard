@@ -48,6 +48,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="RED-py-B2W"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -61,9 +64,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="lights" destination="WDW-Oo-8Zq" collectionClass="NSMutableArray" id="yBw-2w-FVv"/>
-                        <outletCollection property="lights" destination="Nk6-C7-5MG" collectionClass="NSMutableArray" id="lCQ-pi-n8c"/>
-                        <outletCollection property="lights" destination="iZh-6j-kE8" collectionClass="NSMutableArray" id="Y1o-gn-PdO"/>
+                        <outlet property="button" destination="mkq-RI-O8r" id="9uS-yh-Rfh"/>
+                        <outletCollection property="lights" destination="Nk6-C7-5MG" collectionClass="NSMutableArray" id="rId-ac-xJd"/>
+                        <outletCollection property="lights" destination="WDW-Oo-8Zq" collectionClass="NSMutableArray" id="Grt-pn-tOx"/>
+                        <outletCollection property="lights" destination="iZh-6j-kE8" collectionClass="NSMutableArray" id="uMV-Ga-Ido"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
